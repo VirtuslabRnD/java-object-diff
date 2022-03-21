@@ -17,6 +17,7 @@
 package de.danielbechler.diff.selector;
 
 import de.danielbechler.diff.identity.EqualsIdentityStrategy;
+import de.danielbechler.diff.identity.FieldIdentityStrategy;
 import de.danielbechler.diff.identity.IdentityStrategy;
 import de.danielbechler.util.Assert;
 import de.danielbechler.util.Strings;
@@ -71,6 +72,14 @@ public final class CollectionItemElementSelector extends ElementSelector
 	@Override
 	public String toHumanReadableString()
 	{
+        if (identityStrategy instanceof FieldIdentityStrategy)
+        {
+            FieldIdentityStrategy f = (FieldIdentityStrategy) identityStrategy;
+            return String.format("[%s %s=%s]",
+                    item.getClass().getSimpleName(), 
+                    f.getFieldName(), 
+                    Strings.toSingleLineString(f.getValue(item)));
+        }
 		return "[" + Strings.toSingleLineString(item) + "]";
 	}
 
