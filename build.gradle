@@ -27,8 +27,8 @@ group = 'de.danielbechler'
 
 description = """Java Object Diff"""
 
-sourceCompatibility = 1.5
-targetCompatibility = 1.5
+sourceCompatibility = 1.6
+targetCompatibility = 1.6
 
 tasks.withType(JavaCompile) {
 	options.encoding = 'UTF-8'
@@ -96,10 +96,10 @@ dependencies {
 	// For Android support:
 	// signature 'net.sf.androidscents.signature:android-api-level-23:6.0_r3@signature'
 	compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.22'
-	testCompile group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.4.8'
+	testCompile group: 'org.codehaus.groovy', name: 'groovy-all', version: '3.0.10'
 	testCompile group: 'ch.qos.logback', name: 'logback-core', version: '1.2.1'
 	testCompile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.1'
-	testCompile group: 'org.spockframework', name: 'spock-core', version: '1.0-groovy-2.4'
+	testCompile group: 'org.spockframework', name: 'spock-core', version: '2.1-groovy-3.0'
 	testCompile group: 'cglib', name: 'cglib-nodep', version: '3.2.4'
 	testCompile group: 'org.objenesis', name: 'objenesis', version: '2.5.1'
 }
