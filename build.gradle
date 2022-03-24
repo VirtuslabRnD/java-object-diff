@@ -27,8 +27,8 @@ group = 'de.danielbechler'
 
 description = """Java Object Diff"""
 
-sourceCompatibility = 1.6
-targetCompatibility = 1.6
+sourceCompatibility = 8
+targetCompatibility = 8
 
 tasks.withType(JavaCompile) {
 	options.encoding = 'UTF-8'
@@ -96,9 +96,9 @@ jar {
 }
 
 dependencies {
-	signature 'org.codehaus.mojo.signature:java15:1.0@signature'
-	signature 'org.codehaus.mojo.signature:java16:1.1@signature'
-	signature 'org.codehaus.mojo.signature:java17:1.0@signature'
+	//signature 'org.codehaus.mojo.signature:java15:1.0@signature'
+	//signature 'org.codehaus.mojo.signature:java16:1.1@signature'
+	//signature 'org.codehaus.mojo.signature:java17:1.0@signature'
 	// For Android support:
 	// signature 'net.sf.androidscents.signature:android-api-level-23:6.0_r3@signature'
 	compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.22'
