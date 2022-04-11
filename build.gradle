@@ -66,6 +66,7 @@ sourceSets {
 
 test {
 	useJUnitPlatform()
+	jvmArgs "-noverify"
 }
 
 configurations {
