@@ -57,7 +57,7 @@ class PropertyInclusionViaInclusionResolverAT extends Specification {
 
 	@ToString
 	@EqualsAndHashCode
-	class TestObject {
+	static class TestObject {
 		def foo
 		def bar
 	}

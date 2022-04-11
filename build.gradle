@@ -64,12 +64,17 @@ sourceSets {
 	}
 }
 
+test {
+	useJUnitPlatform()
+}
+
 configurations {
 	intTestCompile.extendsFrom testCompile
 	intTestRuntime.extendsFrom testRuntime
 }
 
 task intTest(type: Test) {
+	useJUnitPlatform()
 	testClassesDirs = sourceSets.intTest.output.classesDirs
 	classpath = sourceSets.intTest.runtimeClasspath
 }
