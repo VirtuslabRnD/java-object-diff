@@ -20,3 +20,9 @@ jobs:
         uses: gradle/gradle-build-action@v2
       - name: Build
         run: ./gradlew build
+      - name: Upload test report
+        uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: test-report-${{ matrix.java-version }}
+          path: build/reports/tests/**/*.html
